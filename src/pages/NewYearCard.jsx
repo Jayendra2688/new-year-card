@@ -121,7 +121,7 @@ export default function NewYearCard() {
       setTypedBeautiful(word.slice(0, i + 1));
       i++;
       if (i < word.length) {
-        setTimeout(typeNext, i > word.length - 2 ? 400 : 300);
+        setTimeout(typeNext, i > word.length - 2 ? 500 : 400);
       } else {
         setTimeout(() => setPhase("final"), 1500);
       }
@@ -179,7 +179,7 @@ export default function NewYearCard() {
       }
     };
 
-    setTimeout(typeHappy, 900);
+    setTimeout(typeHappy, 1000);
   }, [phase]);
 
   const handleReset = (e) => {
