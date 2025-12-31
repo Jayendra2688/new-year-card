@@ -2,11 +2,11 @@ import { useState, useEffect, useRef } from "react";
 
 const conversation = [
   { speaker: "Jay", text: "Hey, New Year." },
-  { speaker: "Jay", text: "Why do you always have to bring joy, prosperity, and success?" },
+  { speaker: "Jay", text: "Why do you always need to bring joy, prosperity, and success?" },
   { speaker: "Jay", text: "Why can’t you come alone this time?" },
   { speaker: "New Year", text: "That’s what I’ve been doing all these years, Jay." },
-  { speaker: "Jay", text: "Then what’s so happy about you?" },
-  { speaker: "New Year", text: "The fact that you’re talking to me right now makes me happy." },
+  { speaker: "Jay", text: "Then what is so 'Happy' about you?" },
+  { speaker: "New Year", text: "The fact that you’re talking to me right now... that makes me happy." },
   { speaker: "New Year", text: "And beautiful." },
 ];
 
