@@ -28,7 +28,7 @@ export default function NewYearCard() {
 
   // Initialize Audio
   useEffect(() => {
-    audioRef.current = new Audio("public/newyear.mp3");
+    audioRef.current = new Audio("/newyear.mp3");
     audioRef.current.preload = "auto";
     audioRef.current.volume = 0.35;
     audioRef.current.loop = true;
@@ -180,7 +180,7 @@ export default function NewYearCard() {
       onClick={handleClick}
       className="min-h-screen flex items-center justify-center p-4 overflow-hidden relative"
       style={{
-        backgroundImage: "url('public/bg2.jpg')",
+        backgroundImage: "url('/bg2.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
