@@ -22,6 +22,7 @@ export default function NewYearCard() {
   const [finalText, setFinalText] = useState("");
   const [showReset, setShowReset] = useState(false);
   const [hasReadOnce, setHasReadOnce] = useState(false);
+  const [typedYear, setTypedYear] = useState("");
 
   const audioRef = useRef(null);
   const lastIndex = conversation.length - 1;
@@ -133,12 +134,16 @@ export default function NewYearCard() {
     if (phase !== "final") return;
     const happy = "Happy";
     const newYear = " New Year";
+    const year2026 = "2026";
+    
     setTypedHappy('""');
     setFinalText("");
+    setTypedYear(""); // Reset year
     setShowReset(false);
 
     let i = 0;
     let j = 0;
+    let k = 0;
 
     const typeHappy = () => {
       if (i < happy.length) {
@@ -156,9 +161,20 @@ export default function NewYearCard() {
         setFinalText(newYear.slice(0, j));
         setTimeout(typeNewYear, 200);
       } else {
+        // WAIT 0.5 SECONDS THEN TYPE 2026
+        setTimeout(typeYear, 500);
+      }
+    };
+
+    const typeYear = () => {
+      if (k < year2026.length) {
+        k++;
+        setTypedYear(year2026.slice(0, k));
+        setTimeout(typeYear, 300);
+      } else {
         setTimeout(() => {
-          setShowCard(false); // Remove background
-          setTimeout(() => setShowReset(true), 1000); // Show Button
+          setShowCard(false); 
+          setTimeout(() => setShowReset(true), 1000);
         }, 1200);
       }
     };
@@ -230,6 +246,9 @@ export default function NewYearCard() {
                 <p className="text-4xl md:text-6xl font-greeting text-center">
                   <span className="text-white">{typedHappy}</span>
                   <span className="text-black">{finalText}</span>
+                </p>
+                <p className="text-4xl md:text-6xl font-greeting text-black mt-4 min-h-[1.2em]">
+                  {typedYear}
                 </p>
                 
                 <button
