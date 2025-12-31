@@ -55,7 +55,7 @@ export default function NewYearCard() {
             }
             setIntroFade(true);
           }, 500);
-        }, 1000);
+        }, 500);
         return;
       }
       const delay = introString[i - 1] === " " ? 125 : 250;
@@ -149,7 +149,7 @@ export default function NewYearCard() {
       if (i < happy.length) {
         i++;
         setTypedHappy(`"${happy.slice(0, i)}"`);
-        setTimeout(typeHappy, 300);
+        setTimeout(typeHappy, 500);
       } else {
         typeNewYear();
       }
@@ -159,7 +159,7 @@ export default function NewYearCard() {
       if (j < newYear.length) {
         j++;
         setFinalText(newYear.slice(0, j));
-        setTimeout(typeNewYear, 300);
+        setTimeout(typeNewYear, 400);
       } else {
         // WAIT 0.5 SECONDS THEN TYPE 2026
         setTimeout(typeYear, 600);
@@ -170,7 +170,7 @@ export default function NewYearCard() {
       if (k < year2026.length) {
         k++;
         setTypedYear(year2026.slice(0, k));
-        setTimeout(typeYear, 300);
+        setTimeout(typeYear, 500);
       } else {
         setTimeout(() => {
           setShowCard(false); 
@@ -205,7 +205,7 @@ export default function NewYearCard() {
       {/* 1. INTRO PHASE */}
       {phase === 'intro' && (
         <div className="relative -translate-y-12 flex items-center justify-center">
-          <div className={`font-greeting text-4xl text-white transition-opacity duration-1000 ${introFade ? "opacity-100" : "opacity-0"}`}>
+          <div className={`font-greeting text-4xl text-white transition-opacity duration-500 ${introFade ? "opacity-100" : "opacity-0"}`}>
             {typedText}
           </div>
         </div>
