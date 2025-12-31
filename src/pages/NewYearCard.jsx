@@ -54,7 +54,7 @@ export default function NewYearCard() {
               setTypedText("Click Me!");
             }
             setIntroFade(true);
-          }, 800);
+          }, 500);
         }, 1000);
         return;
       }
@@ -67,7 +67,7 @@ export default function NewYearCard() {
   // Auto-advance Conversation
   useEffect(() => {
     if (phase !== "conversation" || step === lastIndex) return;
-    const timer = setTimeout(() => nextLine(), 4000);
+    const timer = setTimeout(() => nextLine(), 4500);
     return () => clearTimeout(timer);
   }, [step, phase]);
 
@@ -159,10 +159,10 @@ export default function NewYearCard() {
       if (j < newYear.length) {
         j++;
         setFinalText(newYear.slice(0, j));
-        setTimeout(typeNewYear, 200);
+        setTimeout(typeNewYear, 300);
       } else {
         // WAIT 0.5 SECONDS THEN TYPE 2026
-        setTimeout(typeYear, 500);
+        setTimeout(typeYear, 600);
       }
     };
 
@@ -179,7 +179,7 @@ export default function NewYearCard() {
       }
     };
 
-    setTimeout(typeHappy, 800);
+    setTimeout(typeHappy, 900);
   }, [phase]);
 
   const handleReset = (e) => {
