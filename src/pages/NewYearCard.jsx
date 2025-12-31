@@ -247,7 +247,7 @@ export default function NewYearCard() {
                   <span className="text-white">{typedHappy}</span>
                   <span className="text-black">{finalText}</span>
                 </p>
-                <p className="text-4xl md:text-6xl font-greeting text-black mt-4 min-h-[1.2em]">
+                <p className="text-3xl md:text-5xl font-greeting text-black mt-4 min-h-[1.2em]">
                   {typedYear}
                 </p>
                 
