@@ -1,0 +1,13 @@
+@import "@fontsource/dancing-script"; 
+@import "@fontsource/poppins"; 
+@import "@fontsource/roboto"; 
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
